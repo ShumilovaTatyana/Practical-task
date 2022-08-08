@@ -1,15 +1,15 @@
 ﻿//Практическая задача.
-string[] array1 = {"Russia", "Denmark", "Kazan"};
-string[] array2 = new string[array1.Length];
-void NewArray(string[] array1, string[] array2)
+string[] firstArray = {"Russia", "Denmark", "Kazan"};
+string[] secondArray = new string[firstArray.Length];
+void NewArray(string[] firstArray, string[] secondArray)
 {
-    int count = 0;
-    for (int i = 0; i < array1.Length; i++)
+    int j = 0;
+    for (int i = 0; i < firstArray.Length; i++)
     {
-    if(array1[i].Length <= 3)
+    if(firstArray[i].Length <= 3)
         {
-        array2[count] = array1[i];
-        count++;
+        secondArray[j] = firstArray[i];
+        j++;
         }
     }
 }
@@ -23,9 +23,8 @@ void PrintArray(string[] array)
     }
     Console.WriteLine();
 }
-NewArray(array1, array2);
+NewArray(firstArray, secondArray);
 Console.Write($"Исходный массив: ");
-PrintArray(array1);
+PrintArray(firstArray);
 Console.Write($"Итоговый массив: ");
-PrintArray(array2);
-
+PrintArray(secondArray);

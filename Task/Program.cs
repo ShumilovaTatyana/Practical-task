@@ -1,15 +1,17 @@
 ﻿//Практическая задача.
-string[] firstArray = {"Russia", "Denmark", "Kazan"};
-string[] secondArray = new string[firstArray.Length];
+
+string[] firstArray = { "hello", "2", "world", ":-)" };
+string[] secondArray = new string[firstArray.Length - 1];
+
 void NewArray(string[] firstArray, string[] secondArray)
 {
-    int j = 0;
+    int count = 0;
     for (int i = 0; i < firstArray.Length; i++)
     {
-    if(firstArray[i].Length <= 3)
+        if (firstArray[i].Length <= 3)
         {
-        secondArray[j] = firstArray[i];
-        j++;
+            secondArray[count] = firstArray[i];
+            count++;
         }
     }
 }
@@ -28,3 +30,5 @@ Console.Write($"Исходный массив: ");
 PrintArray(firstArray);
 Console.Write($"Итоговый массив: ");
 PrintArray(secondArray);
+
+
